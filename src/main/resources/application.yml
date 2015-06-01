@@ -1,0 +1,8 @@
+server:
+  port: ${PORT:10071}
+
+spring:
+  cloud:
+    config:
+      server:
+        uri: ${conf:https://github.com/joshlong/spring-doge-microservice-configuration}

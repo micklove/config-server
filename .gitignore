@@ -1,0 +1,12 @@
+target/
+**/**/build
+.gradle/
+.idea/
+*.iml
+checkstyle.cache
+repo/
+out/
+build/classes
+**/**/*.log
+**/**/reports
+.DS_Store
