@@ -7,6 +7,6 @@ spring:
     config:
       server:
         git:
-          uri: https://github.com/joshlong/spring-doge-microservice-configuration
-          #uri: https://github.com/micklove/config-server/tree/master/config
+          # nb: Must be a root level folder (e.g. in root of repo at github)
+          uri: https://github.com/micklove/sample-config
       name: ci-config-service
