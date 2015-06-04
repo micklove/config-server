@@ -4,6 +4,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 /**
  * Created by IntelliJ IDEA.
  * User: micklove
@@ -18,14 +20,19 @@ public class User {
     private Long id;
 
     private String user;
+
+    private String email;
+
+    @JsonIgnore
     private String password;
 
     public User() {
     }
 
-    public User(String user, String password) {
+    public User(final String user, final String password, final String email) {
         this.user = user;
         this.password = password;
+        this.email = email;
     }
 
     public Long getId() {
@@ -36,8 +43,11 @@ public class User {
         return user;
     }
 
-
     public String getPassword() {
         return password;
+    }
+
+    public String getEmail() {
+        return email;
     }
 }
